@@ -23,8 +23,10 @@ class MainActivity : AppCompatActivity() {
             lateinit var selectedFragment: Fragment
             when (item.itemId) {
                 R.id.nav_home -> selectedFragment = HomeFragment()
-//                R.id.nav_berita -> selectedFragment = BeritaFragment()
-//                R.id.nav_profile -> selectedFragment = ProfileFragment()
+                R.id.nav_explore -> selectedFragment = SearchFragment()
+                R.id.nav_cart -> selectedFragment = CartFragment()
+                R.id.nav_offer -> selectedFragment = DiscontFragment()
+                R.id.nav_account -> selectedFragment = AccountFragment()
             }
             supportFragmentManager.beginTransaction().replace(R.id.fragment_container, selectedFragment).commit()
             true
