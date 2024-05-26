@@ -1,0 +1,502 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Search Bar and Icons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="309dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/search"
+                android:hint="Search Product"
+                android:padding="10dp" />
+<!--                android:background="@drawable/search_bar_background" -->
+
+
+            <ImageView
+                android:id="@+id/favoriteIcon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="Favorite"
+                android:src="@drawable/love" />
+
+            <ImageView
+                android:id="@+id/notificationIcon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/notification"
+                android:contentDescription="Notification" />
+        </LinearLayout>
+
+        <!-- Flash Sale Banner -->
+        <ImageView
+            android:id="@+id/flashSaleBanner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/sepatu"
+            />
+
+        <!-- Category Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Repeat this block for each category -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/product_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Man Shirt"
+                        android:gravity="center"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/dress" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dress"
+                        android:gravity="center"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/man_bag" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Man Bag"
+                        android:gravity="center"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/woman_bag" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Woman Bag"
+                        android:gravity="center"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/man_shoes" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Man Shoes"
+                        android:gravity="center"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/high_heals" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="High Heals"
+                        android:gravity="center"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Flash Sale Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Flash Sale"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/seeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See More"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_light"
+                android:paddingEnd="16dp" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Repeat this block for each category -->
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:src="@drawable/fl_1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/textViewTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nike Air 270"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewPrice1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$300"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textViewDiscount1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24% Off"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:src="@drawable/fl_3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/textViewTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nike Air 270"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewPrice2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$300"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/textViewDiscount2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24% Off"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:src="@drawable/fl_2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/textViewTitle5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nike Air 270"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewPrice5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$300"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textViewDiscount5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24% Off"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+        <!-- Mega Sale Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mega Sale"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/seeMore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See More"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_light"
+                android:paddingEnd="16dp" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Repeat this block for each category -->
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:src="@drawable/fl_3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/textViewTitle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nike Air 270"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewPrice3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$299,43"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textViewDiscount3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24% Off"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:src="@drawable/mg_1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/textViewTitle4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nike Air 270"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewPrice4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$288"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/textViewDiscount4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24% Off"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:src="@drawable/mg_3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/textViewTitle6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nike Air 270"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewPrice6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$300"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textViewDiscount6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24% Off"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</ScrollView>
